@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="element-ui/index.css" />
+
+	</head>
+	<body>
+		<div id="app" class="outerDiv">
+			<div class="login">
+				<div class="loginBody" align="center">
+					<h4>登录</h4>
+					<el-form :model="loginForm" :rules="loginRules" ref="loginForm" label-width="0px">
+						<el-form-item label="" prop="name" style="margin-top:10px;">
+							<el-row>
+								<el-col :span='2'>
+									<span class="el-icon-s-custom"></span>
+								</el-col>
+								<el-col :span='20'>
+									<el-input class="inps" placeholder='账号' v-model="loginForm.name">
+									</el-input>
+								</el-col>
+							</el-row>
+						</el-form-item>
+						<el-form-item label="" prop="password">
+							<el-row>
+								<el-col :span='2'>
+									<span class="el-icon-lock"></span>
+								</el-col>
+								<el-col :span='20'>
+									<el-input class="inps" type="password" placeholder='密码'
+										v-model="loginForm.password"></el-input>
+								</el-col>
+							</el-row>
+						</el-form-item>
+						<el-form-item style="margin-top:55px;">
+							<el-button type="primary" round class="submitBtn" @click="submitForm">登录
+							</el-button>
+						</el-form-item>
+						<div class="unlogin" class="submitBtn">
+							<router-link :to="{ path: '/forgetpwd'}">
+								忘记密码?
+							</router-link>
+						</div>
+					</el-form>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+
+	<script src="js/vue.js"></script>
+	<script src="element-ui/index.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/vue-resource.js"></script>
+
+</html>

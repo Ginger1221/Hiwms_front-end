@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue test</title>
+		<script src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="hello-vue" class="demo">
+		{{ message }}
+		</div>
+		<script>
+			const helloApp = {
+				data(){
+					return{
+						message:'hello!'
+					}
+				}
+			}
+			
+			Vue.createApp(helloApp).mount('#hello-vue')
+		</script>
+	</body>
+</html>
